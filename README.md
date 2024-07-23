@@ -23,10 +23,12 @@ StopGameRuParser/
 ├── parser/
 │   ├── __init.py__
 │   ├── subpackages/
+│   │   ├── __init.py__
 │   │   ├── NewsCardExtractor.py
 │   │   └── ExcelSaver.py
 │   ├── StopGameParser.py
 │   └── ExcelSaver.py
+├── parser/
 ├── .gitignore
 ├── main.py
 ├── README.md
