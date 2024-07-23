@@ -23,9 +23,9 @@ StopGameRuParser/
 ├── parser/
 │   ├── __init.py__
 │   ├── subpackages/
-│   |   ├── NewsCardExtractor.py
-│   |   └── ExcelSaver.py
-|   ├── StopGameParser.py
+│   │   ├── NewsCardExtractor.py
+│   │   └── ExcelSaver.py
+│   ├── StopGameParser.py
 │   └── ExcelSaver.py
 ├── .gitignore
 ├── main.py
