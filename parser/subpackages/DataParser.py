@@ -2,7 +2,7 @@ import re
 import datetime
 from typing import TypeAlias
 
-from settings import DATE_FORMAT, MONTH_NUM
+from .settings import DATE_FORMAT, MONTH_NUM
 
 date: TypeAlias = datetime.date
 
@@ -11,7 +11,7 @@ class DataParser(object):
     """Class for processing dates from news."""
 
     @staticmethod
-    def process_date(cls, date_value: str) -> date:
+    def process_date(date_value: str) -> date:
         if 'сегодня' in date_value.lower():
             return datetime.date.today()
         if 'вчера' in date_value.lower():

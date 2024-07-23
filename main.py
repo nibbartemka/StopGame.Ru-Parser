@@ -1,7 +1,7 @@
 from parser import StopGameParser as sgp, ExcelSaver as xlsx_save
 import datetime
 
-full_path = '/static/{}'
+full_path = "C:\\Users\\slend\\OneDrive\\Рабочий стол\\StopGameRuParser\\static\\{}"
 
 date_from = datetime.date(2024, 1, 22)
 date_to = datetime.date(2024, 1, 23)

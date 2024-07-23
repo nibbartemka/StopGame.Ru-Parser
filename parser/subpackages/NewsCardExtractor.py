@@ -4,6 +4,7 @@ from typing import List, TypeAlias
 from bs4 import BeautifulSoup as bs, ResultSet
 
 from .DataParser import DataParser
+from .settings import WEBSITE_URL
 
 date: TypeAlias = datetime.date
 
@@ -32,7 +33,7 @@ class NewsCardExtractor(object):
             href_a = news_card.find('a', class_='_title_1vlem_60')
             href_value = href_a.attrs["href"]
 
-            hrefs.append(href_value)
+            hrefs.append(f'{WEBSITE_URL}{href_value}')
 
         return hrefs
 

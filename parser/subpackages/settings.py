@@ -1,3 +1,5 @@
+WEBSITE_URL = 'https://stopgame.ru'
+
 DATE_FORMAT = '%d %m %Y'
 
 MONTH_NUM = {
