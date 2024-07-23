@@ -28,7 +28,7 @@ StopGameRuParser/
 │   │   └── ExcelSaver.py
 │   ├── StopGameParser.py
 │   └── ExcelSaver.py
-├── parser/
+├── static/
 ├── .gitignore
 ├── main.py
 ├── README.md
