@@ -2,29 +2,15 @@ import re
 import datetime
 from typing import TypeAlias
 
+from settings import DATE_FORMAT, MONTH_NUM
+
 date: TypeAlias = datetime.date
 
 
 class DataParser(object):
     """Class for processing dates from news."""
-    DATE_FORMAT = '%d %m %Y'
 
-    MONTH_NUM = {
-      'января': '01',
-      'февраля': '02',
-      'марта': '03',
-      'апреля': '04',
-      'мая': '05',
-      'июня': '06',
-      'июля': '07',
-      'августа': '08',
-      'сентября': '09',
-      'октября': '10',
-      'ноября': '11',
-      'декабря': '12',
-    }
-
-    @classmethod
+    @staticmethod
     def process_date(cls, date_value: str) -> date:
         if 'сегодня' in date_value.lower():
             return datetime.date.today()
@@ -36,8 +22,8 @@ class DataParser(object):
             date_value = f'{date_value} {current_year}'
 
         date_parts = date_value.split()
-        date_parts[1] = cls.MONTH_NUM[date_parts[1]]
+        date_parts[1] = MONTH_NUM[date_parts[1]]
         date_value_by_format = ' '.join(date_parts)
 
         return datetime.datetime.strptime(date_value_by_format,
-                                          cls.DATE_FORMAT).date()
+                                          DATE_FORMAT).date()

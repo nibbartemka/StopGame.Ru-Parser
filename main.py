@@ -1,15 +1,17 @@
-from parser import StopGameParser as sgp, ExcelSaver as xlsxsave
+from parser import StopGameParser as sgp, ExcelSaver as xlsx_save
 import datetime
 
-excel_filename = 'example.xlsx'
-datefrom = datetime.date(2024, 1, 22)
-dateto = datetime.date(2024, 1, 23)
+full_path = '/static/{}'
+
+date_from = datetime.date(2024, 1, 22)
+date_to = datetime.date(2024, 1, 23)
 
 
 def main():
-    parser = sgp.StopGameParser((datefrom, dateto))
+    parser = sgp.StopGameParser((date_from, date_to))
     parser.parse()
-    xlsxsave.ExcelSaver.to_excel(parser.parsed_pages, excel_filename)
+    xlsx_save.ExcelSaver.to_excel(parser.parsed_pages,
+                                  full_path.format('example.xlsx'))
 
 
 if __name__ == '__main__':
